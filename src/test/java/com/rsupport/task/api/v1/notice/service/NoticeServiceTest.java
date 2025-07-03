@@ -129,8 +129,8 @@ class NoticeServiceTest {
 	@Test
 	@DisplayName("등록일 범위 검색 조건으로 조회")
 	void list_with_date_range() {
-		Instant start = Instant.parse("2025-06-26T00:00:00Z");
-		Instant end = Instant.parse("2025-06-30T23:59:59Z");
+		Instant start = Instant.now().minus(1, ChronoUnit.DAYS);
+		Instant end = Instant.now();
 
 		NoticeSearchCondition condition = new NoticeSearchCondition(
 				null,   // keyword
