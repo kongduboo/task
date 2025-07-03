@@ -1,0 +1,6 @@
+### 캐시 전체 목록 확인
+GET http://localhost:8080/actuator/caches
+
+
+### 특정 캐시 통계 확인
+GET http://localhost:8080/actuator/caches/noticeListCache

@@ -1,0 +1,28 @@
+### 공지사항 등록 (성공 예제)
+POST http://localhost:8080/api/v1/notices
+Content-Type: multipart/form-data; boundary=Boundary123
+
+--Boundary123
+Content-Disposition: form-data; name="data"
+Content-Type: application/json
+
+{
+  "title": "테스트 공지사항",
+  "content": "공지 내용입니다.",
+  "startAt": "2025-06-28T10:00:00Z",
+  "endAt": "2025-06-30T10:00:00Z",
+  "writer": "관리자"
+}
+--Boundary123
+Content-Disposition: form-data; name="attachments"; filename="test.txt"
+Content-Type: text/plain
+
+< ./test.txt
+--Boundary123
+Content-Disposition: form-data; name="attachments"; filename="test2.txt"
+Content-Type: text/plain
+
+< ./test2.txt
+--Boundary123--
+
+<> 2025-06-28T141152.500.json
